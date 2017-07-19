@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="RPF.Visual.Personaje"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RPF.Visual"
+             xmlns:type="clr-namespace:RPF"
+             xmlns:materialDesign="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Style TargetType="local:TextInfoInput">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+
+        <local:TextInfoInput x:Name="in_nombre"  />
+        <local:TextInfoInput x:Name="in_nivel" TypeData="Lv" Width="40" Margin="130,10,10,10" Data="Hola"/>
+        <Expander VerticalAlignment="Top" Margin="0,50,0,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <!--Fila 1-->
+                <local:TextInfoInput x:Name="in_clase" TypeData="Clase" Grid.Row="0"/>
+                <local:TextInfoInput x:Name="in_raza" TypeData="Raza" Grid.Row="0" HorizontalAlignment="Right"/>
+                <!--Fila 2-->
+                <local:TextInfoInput x:Name="in_tamano" TypeData="Tamaño" Grid.Row="1" Width="90"/>
+                <local:TextInfoInput x:Name="in_altura" TypeData="Altura" Grid.Row="1" Width="90" HorizontalAlignment="Center"/>
+                <local:TextInfoInput x:Name="in_peso" TypeData="Peso" Grid.Row="1" Width="90" HorizontalAlignment="Right"/>
+                <!--Fila 3-->
+                <local:TextInfoInput x:Name="in_aliniamiento" TypeData="Aliniamiento" Grid.Row="2"/>
+                <local:TextInfoInput x:Name="in_religion" TypeData="Religion" Grid.Row="2" HorizontalAlignment="Right"/>
+                <!--Fila 4-->
+                <local:TextInfoInput x:Name="in_genero" TypeData="Genero" Grid.Row="3"/>
+                <!--Fila 5-->
+                <local:TextInfoInput x:Name="in_apariencia" TypeData="Apariencia" Grid.Row="4"/>
+            </Grid>
+        </Expander>
+    </Grid>
+</UserControl>
